@@ -1,0 +1,37 @@
+[200~Below are the basic commands used in linux
+
+Git Setup Commands • git --version: Check Git version. • git config --global user.name "Your Name": Set global username for commits. • git config --global user.email "your.email@example.com": Set global email for commits. • git config --global color.ui auto: Enable automatic command output coloring. • git config --list: List all Git configurations.
+
+Repository Creation & Initialization • git init: Initialize a new Git repository. • git clone <repository_url>: Clone an existing repository from a URL.
+
+Working with Files • git add : Stage a specific file. • git add .: Stage all changes in the current directory. • git add -A: Stage all changes (tracked and untracked). • git commit -m "Commit message": Commit staged changes with a message. • git commit -a -m "Commit message": Add and commit all tracked files in one step.
+
+Checking Repository Status • git status: Check the status of your working directory. • git diff: Show changes that are not staged yet. • git diff --staged: Show changes that are staged but not committed.
+
+Branching • git branch: List all branches. • git branch <branch_name>: Create a new branch. • git checkout <branch_name>: Switch to another branch. • git checkout -b <branch_name>: Create and switch to a new branch. • git branch -d <branch_name>: Delete a branch. • git merge <branch_name>: Merge another branch into the current branch. • git branch -m <new_name>: Rename the current branch.
+
+Stashing Changes • git stash: Stash (save) uncommitted changes without committing. • git stash pop: Apply stashed changes and remove them from stash. • git stash list: List all stashed changes. • git stash apply: Apply stashed changes without removing them. • git stash drop: Delete a specific stash.
+
+Viewing History • git log: View commit history. • git log --oneline: View commit history in a single line per commit. • git log --graph: Show a graphical representation of commits. • git log -p: Show commits and the differences they introduced. • git show <commit_hash>: Show details of a specific commit.
+
+Undoing Changes • git reset : Unstage a file without changing its contents. • git reset --hard: Discard all changes in the working directory. • git checkout -- : Discard changes in a file (restore last committed version). • git revert <commit_hash>: Create a new commit that undoes changes from a specific commit. • git reset --soft <commit_hash>: Undo commits but keep changes in the working directory. • git reset --hard <commit_hash>: Undo commits and discard changes.
+
+Remote Repositories • git remote add origin : Add a remote repository. • git remote -v: List remote repositories and their URLs. • git push origin <branch_name>: Push changes to a remote repository. • git pull: Fetch and merge changes from the remote repository. • git fetch: Fetch changes from a remote repository without merging. • git remote remove : Remove a remote repository. • git remote rename <old_name> <new_name>: Rename a remote repository.
+
+Tags • git tag: List all tags. • git tag <tag_name>: Create a new tag. • git tag -a <tag_name> -m "Message": Create an annotated tag with a message. • git push origin <tag_name>: Push a tag to the remote repository. • git push origin --tags: Push all tags to the remote repository. • git tag -d <tag_name>: Delete a tag locally. • git push origin :refs/tags/<tag_name>: Delete a tag from a remote repository.
+
+Ignoring Files • .gitignore: A file where you can list files or directories you want Git to ignore. • git rm --cached : Remove a file from tracking but keep it in your local file system.
+
+Viewing File Changes • git diff : See what changes have been made to a file. • git diff <commit_hash1> <commit_hash2>: Compare two commits. • git diff <branch_name1> <branch_name2>: Compare two branches.
+
+Collaboration & Synchronization • git clone <repository_url>: Clone a remote repository. • git fetch origin: Download changes from the remote without merging. • git merge origin/: Merge changes from a remote branch into the current branch. • git push origin <branch_name>: Push your changes to the remote branch. • git rebase : Reapply commits on top of another base tip.
+
+Rebasing • git rebase : Reapply commits from the current branch on top of another branch. • git rebase --continue: After resolving conflicts during a rebase, continue the rebase. • git rebase --abort: Abort a rebase and go back to the state before starting the rebase.
+
+Git Cherry-pick • git cherry-pick <commit_hash>: Apply the changes from a specific commit into the current branch.
+
+Squashing Commits • git rebase -i HEAD~: Interactively rebase the last n commits and squash them together.
+
+Clean-up Commands • git clean -f: Forcefully remove untracked files. • git clean -fd: Remove untracked files and directories.
+
+Aliases • git config --global alias.<alias_name> 'git command': Create custom Git aliases. • Example: git config --global alias.st status to use git st instead of git status.
